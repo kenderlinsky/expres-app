@@ -1,0 +1,15 @@
+services:
+  watchtower:
+    image: nickfedor/watchtower
+    environment:
+      -  WATCHTOWER_POLL_INTERVAL=60 # Poll every 60 seconds
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    container_name: watchtower
+  expres-app:
+    image: kenderlinsky/expres-app
+    container_name: expres-app
+    ports:
+      - "8080:8080"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
