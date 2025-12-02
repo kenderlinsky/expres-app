@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: user/expres-app:latest
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/expres-app:latest
