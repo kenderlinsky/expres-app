@@ -1,3 +1,3 @@
-## express app
+## expres-app
 
 Access with browser http://localhost:8080
