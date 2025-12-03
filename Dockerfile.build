@@ -1,0 +1,7 @@
+FROM docker:28-dind
+
+WORKDIR /docker
+
+COPY . .
+
+ENTRYPOINT ["./builder.sh"]
